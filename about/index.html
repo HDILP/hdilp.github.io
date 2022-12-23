@@ -30,27 +30,27 @@
   <!-- Custom Files headBegin begin-->
   
   <!-- Custom Files headBegin end-->
-    <link rel="shortcut icon" type='image/x-icon' href="https://gcore.jsdelivr.net/gh/xaoxuu/assets@master/favicon/favicon.ico">
+    <link rel="shortcut icon" type='image/x-icon' href="https://pic.imgdb.cn/item/63a56d3108b68301634b34cc.jpg">
   <link rel="preload" href="/css/style.css" as="style">
   <link rel="preload" href="https://unpkg.com/volantis-static@0.0.1660614606622/media/fonts/VarelaRound/VarelaRound-Regular.ttf" as="font" type="font/ttf" crossorigin="anonymous">
 <link rel="preload" href="https://unpkg.com/volantis-static@0.0.1660614606622/media/fonts/UbuntuMono/UbuntuMono-Regular.ttf" as="font" type="font/ttf" crossorigin="anonymous">
 
   <!-- feed -->
-      <link rel="alternate" href="/atom.xml" title="寒澈的小窝" type="application/atom+xml">
+      <link rel="alternate" href="/atom.xml" title="寒澈工作室" type="application/atom+xml">
   <!-- 页面元数据 -->
-  <title>关于 - 寒澈的小窝</title>
+  <title>关于 - 寒澈工作室</title>
   <meta name="keywords" content="null">
-  <meta desc name="description" content="这里是HDILP_STUDIO的官方网站awa - HDILP - 寒澈的小窝">
+  <meta desc name="description" content="这里是寒澈工作室的官方网站 - HDILP - 寒澈工作室">
   
 <meta property="og:type" content="website">
-<meta property="og:title" content="寒澈的小窝">
+<meta property="og:title" content="关于">
 <meta property="og:url" content="https://hdilp.github.io/about/index.html">
-<meta property="og:site_name" content="寒澈的小窝">
-<meta property="og:description" content="下面写关于自己的内容">
+<meta property="og:site_name" content="寒澈工作室">
+<meta property="og:description" content="大家好啊ヾ(•ω•&#96;)o 我是寒澈 这里是寒澈工作室的官方网站 我会在这里发表一些‘’生活小妙招‘’ 以及关于我们工作室的一些资讯 如果有建议 请发邮件给我 或是在撕逼区去留言 谢谢大家的支持 (@•∀•)ノ">
 <meta property="og:locale" content="zh_CN">
 <meta property="og:image" content="https://unpkg.com/volantis-static@0.0.1660614606622/media/org.volantis/blog/favicon/android-chrome-192x192.png">
-<meta property="article:published_time" content="2022-12-17T03:57:08.152Z">
-<meta property="article:modified_time" content="2022-12-17T03:57:08.152Z">
+<meta property="article:published_time" content="2022-12-23T08:30:48.617Z">
+<meta property="article:modified_time" content="2022-12-23T08:30:48.617Z">
 <meta property="article:author" content="HDILP">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:image" content="https://unpkg.com/volantis-static@0.0.1660614606622/media/org.volantis/blog/favicon/android-chrome-192x192.png">
@@ -788,53 +788,34 @@ button {
 .cover-wrapper.focus .menu .list-h a:hover {
   background: var(--color-card);
 }
-.cover-wrapper.dock .top {
-  margin-bottom: 48px;
+.cover-wrapper.focus .menu {
+  transition: all 0.28s ease;
+  -webkit-transition: all 0.28s ease;
+  -khtml-transition: all 0.28s ease;
+  -moz-transition: all 0.28s ease;
+  -o-transition: all 0.28s ease;
+  -ms-transition: all 0.28s ease;
 }
-.cover-wrapper.dock .menu {
+.cover-wrapper.focus .menu .list-h {
+  margin: 2px;
+}
+.cover-wrapper.focus .menu:hover {
   background: rgba(255,255,255,0.5);
-  position: absolute;
-  bottom: 0;
-  max-width: 100%;
-}
-.cover-wrapper.dock .menu .list-h {
-  flex-wrap: nowrap;
-  -webkit-flex-wrap: nowrap;
-  -khtml-flex-wrap: nowrap;
-  -moz-flex-wrap: nowrap;
-  -o-flex-wrap: nowrap;
-  -ms-flex-wrap: nowrap;
-  margin: 4px;
-}
-.cover-wrapper.dock .menu .list-h a+a {
-  margin-left: 4px;
-}
-@media screen and (max-width: 500px) {
-  .cover-wrapper.dock .menu .list-h {
-    overflow-x: scroll;
-  }
-  .cover-wrapper.dock .menu .list-h::-webkit-scrollbar {
-    height: 0;
-    width: 0;
-  }
-  .cover-wrapper.dock .menu .list-h::-webkit-scrollbar-track-piece {
-    background: transparent;
-  }
-  .cover-wrapper.dock .menu .list-h::-webkit-scrollbar-thumb {
-    background: #3dd9b6;
-    cursor: pointer;
-    border-radius: 0;
-    -webkit-border-radius: 0;
-  }
-  .cover-wrapper.dock .menu .list-h::-webkit-scrollbar-thumb:hover {
-    background: #ff5722;
-  }
 }
 @supports (backdrop-filter: blur(20px)) {
-  .cover-wrapper.dock .menu {
+  .cover-wrapper.focus .menu:hover {
     background: rgba(255,255,255,0.5);
     backdrop-filter: saturate(200%) blur(20px);
   }
+}
+.cover-wrapper.focus .menu .list-h a {
+  margin: 2px;
+}
+.cover-wrapper.focus .menu .list-h a:hover {
+  opacity: 1;
+  -webkit-opacity: 1;
+  -moz-opacity: 1;
+  background: var(--color-card);
 }
 @font-face {
   font-family: 'UbuntuMono';
@@ -2108,7 +2089,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
 
 <script>
   window.pdata={}
-  pdata.ispage=false;
+  pdata.ispage=true;
   pdata.commentPath="";
   pdata.commentPlaceholder="";
   pdata.commentConfig={};
@@ -2116,7 +2097,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
     root: '/',
     debug: "env",
     default: {"avatar":"https://unpkg.com/volantis-static@0.0.1660614606622/media/placeholder/avatar/round/3442075.svg","link":"https://unpkg.com/volantis-static@0.0.1660614606622/media/placeholder/link/8f277b4ee0ecd.svg","cover":"https://unpkg.com/volantis-static@0.0.1660614606622/media/placeholder/cover/76b86c0226ffd.svg","image":"https://unpkg.com/volantis-static@0.0.1660614606622/media/placeholder/image/2659360.svg"},
-    lastupdate: new Date(1671697260263),
+    lastupdate: new Date(1671787665312),
     cdn: {
       izitoast_css: 'https://cdn.bootcdn.net/ajax/libs/izitoast/1.4.0/css/iziToast.min.css',
       izitoast_js: 'https://cdn.bootcdn.net/ajax/libs/izitoast/1.4.0/js/iziToast.min.js',
@@ -2124,7 +2105,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
       fancybox_js: 'https://cdn.bootcdn.net/ajax/libs/fancyapps-ui/4.0.31/fancybox.umd.min.js'
     },
     sidebar: {
-      for_page: ["qgroup","post","category","guide"],
+      for_page: ["repos","qgroup","category","guide"],
       for_post: ["toc"],
       webinfo: {
         lastupd: {
@@ -2138,7 +2119,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
       }
     },
     plugins: {
-      message: {"enable":true,"icon":{"default":"fa-solid fa-info-circle light-blue","quection":"fa-solid fa-question-circle light-blue"},"time":{"default":5000,"quection":20000},"position":"topRight","transitionIn":"bounceInLeft","transitionOut":"fadeOutRight","titleColor":"var(--color-text)","messageColor":"var(--color-text)","backgroundColor":"var(--color-card)","zindex":2147483647,"copyright":{"enable":true,"title":"知识共享许可协议","message":"请遵守 CC BY-NC-SA 4.0 协议。","icon":"far fa-copyright light-blue"},"aplayer":{"enable":true,"play":"fa-solid fa-plause","pause":"fa-solid fa-play"},"rightmenu":{"enable":true,"notice":true}},
+      message: {"enable":true,"icon":{"default":"fa-solid fa-info-circle light-blue","quection":"fa-solid fa-question-circle light-blue"},"time":{"default":5000,"quection":20000},"position":"topRight","transitionIn":"bounceInLeft","transitionOut":"fadeOutRight","titleColor":"var(--color-text)","messageColor":"var(--color-text)","backgroundColor":"var(--color-card)","zindex":2147483647,"copyright":{"enable":true,"title":"知识共享许可协议","message":"请遵守 CC BY-NC-SA 4.0 协议。","icon":"far fa-copyright light-blue"},"aplayer":{"enable":true,"play":"fa-solid fa-play","pause":"fa-solid fa-pause"},"rightmenu":{"enable":true,"notice":true}},
       
       aplayer: {
         id: 516764706,
@@ -2197,9 +2178,9 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
         
         <a class="title flat-box" target="_self" href='/'>
           
-            <img no-lazy class='logo' src='https://unpkg.com/volantis-static@0.0.1660614606622/media/org.volantis/blog/Logo-NavBar@3x.png'/>
           
           
+            寒澈工作室
           
         </a>
       
@@ -2281,23 +2262,6 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
             
               <li>
                 <a class="menuitem flat-box faa-parent animated-hover"
-                href="/friends/" title="友链"
-                  
-                  
-                  
-                    active-action="action-friends"
-                  >
-                  <i class='fa-solid fa-link fa-fw'></i>友链
-                </a>
-                
-              </li>
-            
-          
-          
-            
-            
-              <li>
-                <a class="menuitem flat-box faa-parent animated-hover"
                 href="/about/" title="关于"
                   
                   
@@ -2317,7 +2281,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
       <div class="m_search">
         <form name="searchform" class="form u-search-form">
           <i class="icon fa-solid fa-search fa-fw"></i>
-          <input type="text" class="input u-search-input" placeholder="Search..." />
+          <input type="text" class="input u-search-input" placeholder="" />
         </form>
       </div>
       
@@ -2402,23 +2366,6 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
             
               <li>
                 <a class="menuitem flat-box faa-parent animated-hover"
-                href="/friends/" title="友链"
-                  
-                  
-                  
-                    active-action="action-friends"
-                  >
-                  <i class='fa-solid fa-link fa-fw'></i>友链
-                </a>
-                
-              </li>
-            
-          
-            
-              
-            
-              <li>
-                <a class="menuitem flat-box faa-parent animated-hover"
                 href="/about/" title="关于"
                   
                   
@@ -2453,14 +2400,14 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
         <div class="body-wrapper">
           
 <div id="l_main" class=' no_sidebar'>
-  <article itemscope itemtype="http://schema.org/Article" class="article post white-box reveal md shadow floatable blur article-type-docs" id="docs" itemscope itemprop="blogPost">
+  <article itemscope itemtype="http://schema.org/Article" class="article post white-box reveal md shadow floatable blur article-type-post" id="post" itemscope itemprop="blogPost">
   <link itemprop="mainEntityOfPage" href="https://hdilp.github.io/about/index.html">
   <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-    <meta itemprop="name" content="寒澈的小窝">
+    <meta itemprop="name" content="寒澈工作室">
   </span>
   <span hidden itemprop="post" itemscope itemtype="http://schema.org/Post">
-    <meta itemprop="name" content="寒澈的小窝">
-    <meta itemprop="description" content="这里是HDILP_STUDIO的官方网站awa">
+    <meta itemprop="name" content="寒澈工作室">
+    <meta itemprop="description" content="这里是寒澈工作室的官方网站">
   </span>
   
 
@@ -2472,18 +2419,84 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
   
   <div class="article-meta" id="top">
     
+      
+
+  
+    
+      <meting-js
+        mini='true'
+        volume='0.3'
+        loop='all'
+        order='list'
+        server='netease'
+        type='song'
+        id='1351898182'>
+      </meting-js>
+    
+  
+
+
     
     
-      <span hidden itemprop="name headline">
+    
+      <h1 class="title" itemprop="name headline">
+        关于
+      </h1>
+      <div class='new-meta-box'>
         
-      </span>
+          
+            
+<div class='new-meta-item author' itemprop="author" itemscope itemtype="http://schema.org/Person">
+  <a itemprop="url" class='author' href="/about/" rel="nofollow">
+    <img itemprop="image" src="https://pic.imgdb.cn/item/63a56d3108b68301634b34cc.jpg" class="lazyload" data-srcset="https://pic.imgdb.cn/item/63a56d3108b68301634b34cc.jpg" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==">
+    <p itemprop="name">HDILP</p>
+  </a>
+</div>
+
+          
+        
+          
+            
+
+
+          
+        
+          
+            <div class="new-meta-item date" itemprop="dateCreated datePublished" datetime="2022-12-23T16:30:48+08:00">
+  <a class='notlink'>
+    <i class="fas fa-calendar-alt fa-fw" aria-hidden="true"></i>
+    <p>发布于：2022年12月23日</p>
+  </a>
+</div>
+
+          
+        
+          
+            
+
+
+
+          
+        
+        <!-- Custom Files topMeta begin-->
+        
+        <!-- Custom Files topMeta end-->
+      </div>
     
   </div>
 
 
   <div id="layoutHelper-page-plugins"></div>
   <div id="post-body" itemprop="articleBody">
-    <p>下面写关于自己的内容</p>
+    <p>大家好啊ヾ(•ω•&#96;)o</p>
+<p>我是寒澈</p>
+<p>这里是寒澈工作室的官方网站</p>
+<p>我会在这里发表一些‘’生活小妙招‘’</p>
+<p>以及关于我们工作室的一些资讯</p>
+<p>如果有建议</p>
+<p>请发邮件给我</p>
+<p>或是在撕逼区去留言</p>
+<p>谢谢大家的支持 (@•∀•)ノ</p>
 
   </div>
   
@@ -2534,7 +2547,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
     <span hidden>
       <meta itemprop="discussionUrl" content="/about/index.html#comments">
     </span>
-    <p ct><i class='fas fa-comments'></i> 评论</p>
+    <p ct><i class='fas fa-comments'></i> 评论区o(〃＾▽＾〃)o</p>
     
 
     <div id="layoutHelper-comments"></div>
@@ -2576,7 +2589,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
     
       <meting-js
         theme='#1BCDFC'
-        autoplay='true'
+        autoplay='false'
         volume='0.3'
         loop='all'
         order='list'
@@ -3173,7 +3186,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
                     let artist = aplayerItem.list.audios[index].artist;
                     setTimeout(() => {
                       VolantisApp.message('音乐通知', title + ' - ' + artist, {
-                        icon: 'fa-solid fa-plause',
+                        icon: 'fa-solid fa-play',
                         transitionIn: 'flipInX',
                         transitionOut: 'flipOutX'
                       });
@@ -3189,7 +3202,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
                       // 歌曲播放结束也会触发 pause 事件，为了避免错误提示，等待一会儿
                       if(aplayerItem.paused) {
                         VolantisApp.message('音乐通知', title + ' - ' + artist, {
-                          icon: 'fa-solid fa-play',
+                          icon: 'fa-solid fa-pause',
                           transitionIn: 'flipInX',
                           transitionOut: 'flipOutX'
                         });
@@ -3531,7 +3544,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
 </script>
 
 
-  <script type="application/ld+json">[{"@context":"http://schema.org","@type":"Organization","name":"寒澈的小窝","url":"https://hdilp.github.io/","logo":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1660614606622/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}},{"@context":"http://schema.org","@type":"Person","name":"HDILP","image":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1660614606622/media/org.volantis/blog/favicon/android-chrome-192x192.png"},"url":"https://hdilp.github.io/","sameAs":["https://github.com/volantis-x"],"description":"这里是HDILP_STUDIO的官方网站awa"},{"@context":"http://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"item":{"@id":"https://hdilp.github.io/","name":"寒澈的小窝"}}]},{"@context":"http://schema.org","@type":"WebSite","name":"寒澈的小窝","url":"https://hdilp.github.io/","keywords":null,"description":"这里是HDILP_STUDIO的官方网站awa","author":{"@type":"Person","name":"HDILP","image":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1660614606622/media/org.volantis/blog/favicon/android-chrome-192x192.png"},"url":"https://hdilp.github.io/","description":"这里是HDILP_STUDIO的官方网站awa"},"publisher":{"@type":"Organization","name":"寒澈的小窝","url":"https://hdilp.github.io/","logo":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1660614606622/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}},"potentialAction":{"@type":"SearchAction","name":"Site Search","target":{"@type":"EntryPoint","urlTemplate":"https://hdilp.github.io?s={search_term_string}"},"query-input":"required name=search_term_string"}},{"@context":"http://schema.org","@type":"BlogPosting","headline":"关于","description":"这里是HDILP_STUDIO的官方网站awa","inLanguage":"zh-CN","mainEntityOfPage":{"@type":"WebPage","@id":"https://hdilp.github.io/about/index.html"},"author":{"@type":"Person","name":"HDILP","image":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1660614606622/media/org.volantis/blog/favicon/android-chrome-192x192.png"},"url":"https://hdilp.github.io/"},"publisher":{"@type":"Organization","name":"寒澈的小窝","logo":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1660614606622/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}},"url":"https://hdilp.github.io/about/index.html","wordCount":0,"datePublished":"2022-12-17T03:57:08.152Z","dateModified":"2022-12-17T03:57:08.152Z","image":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1660614606622/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}}]</script>
+  <script type="application/ld+json">[{"@context":"http://schema.org","@type":"Organization","name":"寒澈工作室","url":"https://hdilp.github.io/","logo":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1660614606622/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}},{"@context":"http://schema.org","@type":"Person","name":"HDILP","image":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1660614606622/media/org.volantis/blog/favicon/android-chrome-192x192.png"},"url":"https://hdilp.github.io/","sameAs":["https://github.com/volantis-x"],"description":"这里是寒澈工作室的官方网站"},{"@context":"http://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"item":{"@id":"https://hdilp.github.io/","name":"寒澈工作室"}}]},{"@context":"http://schema.org","@type":"WebSite","name":"寒澈工作室","url":"https://hdilp.github.io/","keywords":null,"description":"这里是寒澈工作室的官方网站","author":{"@type":"Person","name":"HDILP","image":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1660614606622/media/org.volantis/blog/favicon/android-chrome-192x192.png"},"url":"https://hdilp.github.io/","description":"这里是寒澈工作室的官方网站"},"publisher":{"@type":"Organization","name":"寒澈工作室","url":"https://hdilp.github.io/","logo":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1660614606622/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}},"potentialAction":{"@type":"SearchAction","name":"Site Search","target":{"@type":"EntryPoint","urlTemplate":"https://hdilp.github.io?s={search_term_string}"},"query-input":"required name=search_term_string"}},{"@context":"http://schema.org","@type":"BlogPosting","headline":"关于","description":"这里是寒澈工作室的官方网站","inLanguage":"zh-CN","mainEntityOfPage":{"@type":"WebPage","@id":"https://hdilp.github.io/about/index.html"},"author":{"@type":"Person","name":"HDILP","image":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1660614606622/media/org.volantis/blog/favicon/android-chrome-192x192.png"},"url":"https://hdilp.github.io/"},"publisher":{"@type":"Organization","name":"寒澈工作室","logo":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1660614606622/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}},"url":"https://hdilp.github.io/about/index.html","wordCount":0,"datePublished":"2022-12-23T08:30:48.617Z","dateModified":"2022-12-23T08:30:48.617Z","image":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1660614606622/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}}]</script>
 
 
 

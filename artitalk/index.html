@@ -3,6 +3,7 @@
     <head hexo-theme='https://github.com/volantis-x/hexo-theme-volantis/#6.0.0-alpha.1'>
   <meta name="generator" content="Hexo 6.3.0">
   <meta name="baidu-site-verification" content="code-XDd4p2uGVM" />
+  <meta name="baidu-site-verification" content="code-wfv0sz1qSl" />
   <meta name="google-site-verification" content="Y5PPYkpEdoBFoPS6yEg57xq8dmr2u9oxoDPpHg5Ab5k" />
   <meta name="360-site-verification" content="70c7566d5742ffba32328181c5b8db2f" />
   <meta name="Volantis" content="6.0.0-alpha.1">
@@ -215,6 +216,14 @@ button {
     background: rgba(255,255,255,0.9) !important;
     backdrop-filter: saturate(200%) blur(20px);
   }
+}
+@supports (backdrop-filter: blur(20px)) {
+  .blur#comments {
+    backdrop-filter: unset;
+  }
+}
+#layoutHelper-comments {
+  margin-bottom: 100px;
 }
 .shadow {
   box-shadow: 0 1px 2px 0px rgba(0,0,0,0.1);
@@ -2095,7 +2104,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
     root: '/',
     debug: "env",
     default: {"avatar":"https://unpkg.com/volantis-static@0.0.1660614606622/media/placeholder/avatar/round/3442075.svg","link":"https://unpkg.com/volantis-static@0.0.1660614606622/media/placeholder/link/8f277b4ee0ecd.svg","cover":"https://unpkg.com/volantis-static@0.0.1660614606622/media/placeholder/cover/76b86c0226ffd.svg","image":"https://unpkg.com/volantis-static@0.0.1660614606622/media/placeholder/image/2659360.svg"},
-    lastupdate: new Date(1671855152926),
+    lastupdate: new Date(1672021688672),
     cdn: {
       izitoast_css: 'https://cdn.bootcdn.net/ajax/libs/izitoast/1.4.0/css/iziToast.min.css',
       izitoast_js: 'https://cdn.bootcdn.net/ajax/libs/izitoast/1.4.0/js/iziToast.min.js',
@@ -3143,50 +3152,37 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
 
 
       <script>
-  volantis.layoutHelper("comments",`<div id="giscus_container"></div>`)
-
-  volantis.giscus = {};
-
-  function check_giscus() {
-    if (volantis.dark.mode === "dark") {
-      volantis.giscus.Theme = 'dark';
-    } else {
-      volantis.giscus.Theme = 'light';
+  volantis.layoutHelper("comments",`<div id="twikoo_container"><i class="fa-solid fa-cog fa-spin fa-fw fa-2x"></i></div>`)
+  function load_twikoo() {
+    if(!document.querySelectorAll("#twikoo_container")[0])return;
+    volantis.js("https://cdn.bootcdn.net/ajax/libs/twikoo/1.6.7/twikoo.min.js", p_twikoo)
+  }
+  function p_twikoo() {
+    if(!document.querySelectorAll("#twikoo_container")[0])return;
+    let path = pdata.commentPath;
+    let placeholder = pdata.commentPlaceholder || "" || "";
+    if (path.length == 0) {
+      let defaultPath = '';
+      path = defaultPath || decodeURI(window.location.pathname);
     }
-
-    return document.getElementById("giscus_container");
-  }
-
-  function p_giscus() {
-    const HEAD = check_giscus();
-    if (!HEAD) return;
-    let cfg = Object.assign({"theme":{"light":"light","dark":"dark"},"repo":"HDILP/hdilp.github.io","repo-id":"R_kgDOIkx-Mg","category":"Announcements","category-id":"DIC_kwDOIkx-Ms4CTDAB","mapping":"pathname","strict":"0","reactions-enabled":"1","emit-metadata":"0","input-position":"bottom","lang":"zh-CN","crossorigin":"anonymous"},pdata.commentConfig)
-    const script = document.createElement('script');
-    script.setAttribute('src', 'https://giscus.app/client.js');
-    Object.keys(cfg).forEach(k=>{
-      if (k != "theme") {
-        script.setAttribute('data-'+k, cfg[k]);
+    twikoo.init(Object.assign(Object.assign({"path":null,"envId":"https://twikoo-hdilp.vercel.app/","placeholder":null,"visitor":true}, {
+      el: '#twikoo_container',
+      path: path,
+      placeholder: placeholder,
+      onCommentLoaded: function() {
+        if(typeof VolantisFancyBox === "undefined") {
+          const checkFancyBox = setInterval(() => {
+            if(typeof VolantisFancyBox === "undefined") return;
+            clearInterval(checkFancyBox);
+            VolantisFancyBox.groupBind('.tk-content img:not([class*="emo"])', 'Comments');
+          })
+        } else {
+          VolantisFancyBox.groupBind('.tk-content img:not([class*="emo"])', 'Comments');
+        }
       }
-    })
-    script.setAttribute('data-theme', volantis.giscus.Theme);
-    script.setAttribute('crossorigin', "anonymous");
-    HEAD.appendChild(script);
+    }),pdata.commentConfig))
   }
-
-  function dark_giscus() {
-    const HEAD = check_giscus();
-    if (!HEAD) return;
-
-    const message = {
-      setConfig: {
-        theme: volantis.giscus.Theme
-      }
-    };
-    const giscusIframe = document.querySelector('iframe.giscus-frame');
-    giscusIframe.contentWindow.postMessage({ giscus: message }, 'https://giscus.app');
-  }
-  p_giscus();
-  volantis.dark.push(dark_giscus);
+  load_twikoo();
 </script>
 
     

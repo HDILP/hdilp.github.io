@@ -2104,7 +2104,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
     root: '/',
     debug: "env",
     default: {"avatar":"https://unpkg.com/volantis-static@0.0.1660614606622/media/placeholder/avatar/round/3442075.svg","link":"https://unpkg.com/volantis-static@0.0.1660614606622/media/placeholder/link/8f277b4ee0ecd.svg","cover":"https://unpkg.com/volantis-static@0.0.1660614606622/media/placeholder/cover/76b86c0226ffd.svg","image":"https://unpkg.com/volantis-static@0.0.1660614606622/media/placeholder/image/2659360.svg"},
-    lastupdate: new Date(1672189269222),
+    lastupdate: new Date(1672195424312),
     cdn: {
       izitoast_css: 'https://cdn.bootcdn.net/ajax/libs/izitoast/1.4.0/css/iziToast.min.css',
       izitoast_js: 'https://cdn.bootcdn.net/ajax/libs/izitoast/1.4.0/js/iziToast.min.js',
@@ -3120,50 +3120,39 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
 
 
       <script>
-  volantis.layoutHelper("comments",`<div id="waline"><i class="fa-solid fa-cog fa-spin fa-fw fa-2x"></i></div>`)
-  
-  function p_waline() {
-    if(!document.querySelector("#waline"))return;
-    let locale = {};
+  volantis.layoutHelper("comments",`<div id="twikoo_container"><i class="fa-solid fa-cog fa-spin fa-fw fa-2x"></i></div>`)
+  function load_twikoo() {
+    if(!document.querySelectorAll("#twikoo_container")[0])return;
+    volantis.js("https://cdn.bootcdn.net/ajax/libs/twikoo/1.6.7/twikoo.min.js", p_twikoo)
+  }
+  function p_twikoo() {
+    if(!document.querySelectorAll("#twikoo_container")[0])return;
     let path = pdata.commentPath;
-    let pagePlaceholder = pdata.commentPlaceholder || "快来评论吧~";
+    let placeholder = pdata.commentPlaceholder || "" || "";
     if (path.length == 0) {
       let defaultPath = '';
       path = defaultPath || decodeURI(window.location.pathname);
     }
-    if(pagePlaceholder.length != 0) {
-      locale.placeholder = pagePlaceholder;
-    }
-
-    try {
-      Waline.init(Object.assign(Object.assign({"path":null,"placeholder":"快来评论吧~","serverURL":"https://waline.imhundred.tk","imageUploader":{"api":null,"token":null,"resp":null},"pageview":true,"comment":true,"imageHosting":"https://7bu.top/api/upload"}, {
-        el: '#waline',
-        path: path,
-        // https://github.com/volantis-x/hexo-theme-volantis/issues/713
-        
-        locale,
-      }),pdata.commentConfig));
-    } catch (error) {
-      alert(`Waline ${error}`)
-    }
-    fancybox_waline()
+    twikoo.init(Object.assign(Object.assign({"path":null,"envId":"http://twikoo.hdilp-studio.ml/","placeholder":null,"visitor":true}, {
+      el: '#twikoo_container',
+      path: path,
+      placeholder: placeholder,
+      onCommentLoaded: function() {
+        if(typeof VolantisFancyBox === "undefined") {
+          const checkFancyBox = setInterval(() => {
+            if(typeof VolantisFancyBox === "undefined") return;
+            clearInterval(checkFancyBox);
+            VolantisFancyBox.groupBind('.tk-content img:not([class*="emo"])', 'Comments');
+          })
+        } else {
+          VolantisFancyBox.groupBind('.tk-content img:not([class*="emo"])', 'Comments');
+        }
+      }
+    }),pdata.commentConfig))
   }
-
-  function fancybox_waline() {
-    if(typeof VolantisFancyBox === "undefined") {
-      const checkFancyBox = setInterval(() => {
-        if(typeof VolantisFancyBox === "undefined") return;
-        clearInterval(checkFancyBox);
-        VolantisFancyBox.bind('#waline .wl-content img:not(.wl-emoji)');
-      })
-    } else {
-      VolantisFancyBox.bind('#waline .wl-content img:not(.wl-emoji)');
-    }
-  }
-
-  volantis.css('https://cdn.bootcdn.net/ajax/libs/waline/2.6.3/waline.min.css')
-  volantis.js('https://cdn.bootcdn.net/ajax/libs/waline/2.6.3/waline.min.js').then(p_waline)
+  load_twikoo();
 </script>
+
     
 
 

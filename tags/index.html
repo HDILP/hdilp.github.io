@@ -2070,7 +2070,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
     root: '/',
     debug: "env",
     default: {"avatar":"https://unpkg.com/volantis-static@0.0.1660614606622/media/placeholder/avatar/round/3442075.svg","link":"https://unpkg.com/volantis-static@0.0.1660614606622/media/placeholder/link/8f277b4ee0ecd.svg","cover":"https://unpkg.com/volantis-static@0.0.1660614606622/media/placeholder/cover/76b86c0226ffd.svg","image":"https://unpkg.com/volantis-static@0.0.1660614606622/media/placeholder/image/2659360.svg"},
-    lastupdate: new Date(1672715191371),
+    lastupdate: new Date(1672722152586),
     cdn: {
       izitoast_css: 'https://cdn.bootcdn.net/ajax/libs/izitoast/1.4.0/css/iziToast.min.css',
       izitoast_js: 'https://cdn.bootcdn.net/ajax/libs/izitoast/1.4.0/js/iziToast.min.js',
@@ -2095,7 +2095,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
       message: {"enable":true,"icon":{"default":"fa-solid fa-info-circle light-blue","quection":"fa-solid fa-question-circle light-blue"},"time":{"default":5000,"quection":20000},"position":"topRight","transitionIn":"bounceInLeft","transitionOut":"fadeOutRight","titleColor":"var(--color-text)","messageColor":"var(--color-text)","backgroundColor":"var(--color-card)","zindex":2147483647,"copyright":{"enable":true,"title":"知识共享许可协议","message":"请遵守 CC BY-NC-SA 4.0 协议。","icon":"far fa-copyright light-blue"},"aplayer":{"enable":true,"play":"fa-solid fa-play","pause":"fa-solid fa-pause"},"rightmenu":{"enable":true,"notice":true}},
       
       aplayer: {
-        id: 516764706,
+        id: 8619164004,
         enable:true
       },
       
@@ -2447,15 +2447,15 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
     
       <meting-js
         theme='#1BCDFC'
-        autoplay='false'
+        autoplay='true'
         volume='0.3'
         loop='all'
         order='list'
         fixed='false'
         list-max-height='320px'
-        server='netease'
+        server='tencent'
         type='playlist'
-        id='516764706'
+        id='8619164004'
         list-folded='true'>
       </meting-js>
     
@@ -3057,7 +3057,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
               Metings.forEach((item, index) => {
                 const aplayerItem = item.aplayer; if(!aplayerItem) return;
                 const rightAplayerCheck = 'true' === 'true'
-                  && item.meta.id === '516764706';
+                  && item.meta.id === '8619164004';
                 if(rightAplayerCheck && typeof RightMenuAplayer !="undefined") RightMenuAplayer.checkAPlayer();
                 if(aplayerItem.events.events.play.every(item => {return item.name !== 'messagePlay'})) {
                   aplayerItem.on('play', function messagePlay() {
@@ -3227,7 +3227,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
 
 
   <script>
-  let imgs = ["https://fastly.jsdelivr.net/gh/hdilp/picture/4.jpg","https://fastly.jsdelivr.net/gh/hdilp/picture/3.jpg","https://fastly.jsdelivr.net/gh/hdilp/picture/10.jpg","https://fastly.jsdelivr.net/gh/hdilp/picture/9.jpg","https://fastly.jsdelivr.net/gh/hdilp/picture/8.jpg","https://fastly.jsdelivr.net/gh/hdilp/picture/2.jpg","https://fastly.jsdelivr.net/gh/hdilp/picture/1.jpg","https://fastly.jsdelivr.net/gh/hdilp/picture/7.jpg","https://fastly.jsdelivr.net/gh/hdilp/picture/6.jpg","https://fastly.jsdelivr.net/gh/hdilp/picture/5.jpg"];
+  let imgs = ["https://fastly.jsdelivr.net/gh/hdilp/picture/4.jpg","https://fastly.jsdelivr.net/gh/hdilp/picture/8.jpg","https://fastly.jsdelivr.net/gh/hdilp/picture/7.jpg","https://fastly.jsdelivr.net/gh/hdilp/picture/6.jpg","https://fastly.jsdelivr.net/gh/hdilp/picture/1.jpg","https://fastly.jsdelivr.net/gh/hdilp/picture/3.jpg","https://fastly.jsdelivr.net/gh/hdilp/picture/10.jpg","https://fastly.jsdelivr.net/gh/hdilp/picture/9.jpg","https://fastly.jsdelivr.net/gh/hdilp/picture/5.jpg","https://fastly.jsdelivr.net/gh/hdilp/picture/2.jpg"];
   let index = 0;
   let IntervalParallax = null;
 

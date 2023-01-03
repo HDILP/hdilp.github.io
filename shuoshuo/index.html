@@ -2072,7 +2072,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
     root: '/',
     debug: "env",
     default: {"avatar":"https://unpkg.com/volantis-static@0.0.1660614606622/media/placeholder/avatar/round/3442075.svg","link":"https://unpkg.com/volantis-static@0.0.1660614606622/media/placeholder/link/8f277b4ee0ecd.svg","cover":"https://unpkg.com/volantis-static@0.0.1660614606622/media/placeholder/cover/76b86c0226ffd.svg","image":"https://unpkg.com/volantis-static@0.0.1660614606622/media/placeholder/image/2659360.svg"},
-    lastupdate: new Date(1672713218550),
+    lastupdate: new Date(1672715191371),
     cdn: {
       izitoast_css: 'https://cdn.bootcdn.net/ajax/libs/izitoast/1.4.0/css/iziToast.min.css',
       izitoast_js: 'https://cdn.bootcdn.net/ajax/libs/izitoast/1.4.0/js/iziToast.min.js',
@@ -3055,6 +3055,28 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
 
 
 
+   <script type="text/javascript">
+  function p_scrollrebeal() {
+    ScrollReveal().reveal("#l_main .reveal", {
+      distance: "32px",
+      duration: "800",
+      interval: "20",
+      scale: "1",
+      easing: "ease-out",
+    });
+  }
+  function init_scrollrebeal() {
+    if (typeof ScrollReveal == "undefined") {
+      volantis.requestAnimationFrame(init_scrollrebeal);
+    } else {
+      p_scrollrebeal();
+    }
+  }
+  volantis.js("https://cdn.bootcdn.net/ajax/libs/scrollReveal.js/4.0.9/scrollreveal.min.js");
+  document.addEventListener("DOMContentLoaded", init_scrollrebeal)
+</script>
+
+
 
 
   <script>
@@ -3256,7 +3278,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
 
 
   <script>
-  let imgs = ["https://fastly.jsdelivr.net/gh/hdilp/picture/6.jpg","https://fastly.jsdelivr.net/gh/hdilp/picture/13.jpg","https://fastly.jsdelivr.net/gh/hdilp/picture/12.jpg","https://fastly.jsdelivr.net/gh/hdilp/picture/11.jpg","https://fastly.jsdelivr.net/gh/hdilp/picture/8.jpg","https://fastly.jsdelivr.net/gh/hdilp/picture/4.jpg","https://fastly.jsdelivr.net/gh/hdilp/picture/10.jpg","https://fastly.jsdelivr.net/gh/hdilp/picture/9.jpg","https://fastly.jsdelivr.net/gh/hdilp/picture/7.jpg","https://fastly.jsdelivr.net/gh/hdilp/picture/2.jpg","https://fastly.jsdelivr.net/gh/hdilp/picture/5.jpg","https://fastly.jsdelivr.net/gh/hdilp/picture/1.jpg","https://fastly.jsdelivr.net/gh/hdilp/picture/3.jpg"];
+  let imgs = ["https://fastly.jsdelivr.net/gh/hdilp/picture/4.jpg","https://fastly.jsdelivr.net/gh/hdilp/picture/3.jpg","https://fastly.jsdelivr.net/gh/hdilp/picture/10.jpg","https://fastly.jsdelivr.net/gh/hdilp/picture/9.jpg","https://fastly.jsdelivr.net/gh/hdilp/picture/8.jpg","https://fastly.jsdelivr.net/gh/hdilp/picture/2.jpg","https://fastly.jsdelivr.net/gh/hdilp/picture/1.jpg","https://fastly.jsdelivr.net/gh/hdilp/picture/7.jpg","https://fastly.jsdelivr.net/gh/hdilp/picture/6.jpg","https://fastly.jsdelivr.net/gh/hdilp/picture/5.jpg"];
   let index = 0;
   let IntervalParallax = null;
 

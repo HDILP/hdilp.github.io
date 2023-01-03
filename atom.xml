@@ -3,11 +3,11 @@
   <title>寒澈工作室</title>
   
   
-  <link href="https://hdilp.github.io/atom.xml" rel="self"/>
+  <link href="https://hdilp-studio.ml/atom.xml" rel="self"/>
   
-  <link href="https://hdilp.github.io/"/>
-  <updated>2022-12-23T09:24:59.949Z</updated>
-  <id>https://hdilp.github.io/</id>
+  <link href="https://hdilp-studio.ml/"/>
+  <updated>2022-12-31T08:10:36.633Z</updated>
+  <id>https://hdilp-studio.ml/</id>
   
   <author>
     <name>HDILP</name>
@@ -17,9 +17,29 @@
   <generator uri="https://hexo.io/">Hexo</generator>
   
   <entry>
+    <title></title>
+    <link href="https://hdilp-studio.ml/pin.html"/>
+    <id>https://hdilp-studio.ml/pin.html</id>
+    <published>2022-12-31T16:00:00.000Z</published>
+    <updated>2022-12-31T08:10:36.633Z</updated>
+    
+    <content type="html"><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><p><span class='p logo center large'>HDILP-STUDIO</span><span class='p center small logo'>Share the beauty</span></p><br><span class='btn solid large center'><a class="button" href='/about/' title='关于'><i class='fa-regular fa-flag'></i>关于</a></span><br>]]></content>
+    
+    
+      
+      
+    <summary type="html">&lt;link rel=&quot;stylesheet&quot; class=&quot;aplayer-secondary-style-marker&quot; href=&quot;\assets\css\APlayer.min.css&quot;&gt;&lt;script src=&quot;\assets\js\APlayer.min.js&quot; cla</summary>
+      
+    
+    
+    
+    
+  </entry>
+  
+  <entry>
     <title>装修中</title>
-    <link href="https://hdilp.github.io/awa.html"/>
-    <id>https://hdilp.github.io/awa.html</id>
+    <link href="https://hdilp-studio.ml/awa.html"/>
+    <id>https://hdilp-studio.ml/awa.html</id>
     <published>2022-12-23T09:23:09.000Z</published>
     <updated>2022-12-23T09:24:59.949Z</updated>
     

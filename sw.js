@@ -10,7 +10,7 @@
 
 'use strict';
 
-var precacheConfig = [["/sw-register.js","c11b73c1b3aa4ba9aa37a962e8ffb86c"]];
+var precacheConfig = [];
 var cacheName = 'sw-precache-v3--' + (self.registration ? self.registration.scope : '');
 var firstRegister = 1; // 默认1是首次安装SW， 0是SW更新
 

@@ -3,11 +3,11 @@
   <title>寒澈工作室</title>
   
   
-  <link href="https://hdilp-studio.ml/atom.xml" rel="self"/>
+  <link href="https://hdilp.github.io/atom.xml" rel="self"/>
   
-  <link href="https://hdilp-studio.ml/"/>
+  <link href="https://hdilp.github.io/"/>
   <updated>2022-12-31T08:10:36.633Z</updated>
-  <id>https://hdilp-studio.ml/</id>
+  <id>https://hdilp.github.io/</id>
   
   <author>
     <name>HDILP</name>
@@ -18,8 +18,8 @@
   
   <entry>
     <title></title>
-    <link href="https://hdilp-studio.ml/pin.html"/>
-    <id>https://hdilp-studio.ml/pin.html</id>
+    <link href="https://hdilp.github.io/pin.html"/>
+    <id>https://hdilp.github.io/pin.html</id>
     <published>2022-12-31T16:00:00.000Z</published>
     <updated>2022-12-31T08:10:36.633Z</updated>
     

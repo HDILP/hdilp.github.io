@@ -10,5 +10,5 @@ Disallow: /fonts/
 Disallow: /vendors/
 Disallow: /fancybox/
 
-Sitemap: https://hdilp-studio.ml/sitemap.xml
-Sitemap: https://hdilp-studio.ml/baidusitemap.xml
+Sitemap: https://hdilp.top/sitemap.xml
+Sitemap: https://hdilp.top/baidusitemap.xml

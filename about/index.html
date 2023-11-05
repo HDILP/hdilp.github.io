@@ -1895,7 +1895,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
   volantis.import = {
     jQuery: () => {
       if (typeof jQuery == "undefined") {
-        return volantis.js("https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js")
+        return volantis.js("https://cdn.bootcdn.net/ajax/libs/jquery/3.6.0/jquery.min.js")
       } else {
         return new Promise(resolve => {
           resolve()
@@ -2071,12 +2071,12 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
     root: '/',
     debug: "env",
     default: {"avatar":"https://unpkg.com/volantis-static@0.0.1660614606622/media/placeholder/avatar/round/3442075.svg","link":"https://unpkg.com/volantis-static@0.0.1660614606622/media/placeholder/link/8f277b4ee0ecd.svg","cover":"https://unpkg.com/volantis-static@0.0.1660614606622/media/placeholder/cover/76b86c0226ffd.svg","image":"https://unpkg.com/volantis-static@0.0.1660614606622/media/placeholder/image/2659360.svg"},
-    lastupdate: new Date(1699144228340),
+    lastupdate: new Date(1699145085700),
     cdn: {
-      izitoast_css: 'https://cdnjs.cloudflare.com/ajax/libs/izitoast/1.4.0/css/iziToast.min.css',
-      izitoast_js: 'https://cdnjs.cloudflare.com/ajax/libs/izitoast/1.4.0/js/iziToast.min.js',
-      fancybox_css: 'https://cdnjs.cloudflare.com/ajax/libs/fancyapps-ui/4.0.31/fancybox.min.css',
-      fancybox_js: 'https://cdnjs.cloudflare.com/ajax/libs/fancyapps-ui/4.0.31/fancybox.umd.min.js'
+      izitoast_css: 'https://cdn.bootcdn.net/ajax/libs/izitoast/1.4.0/css/iziToast.min.css',
+      izitoast_js: 'https://cdn.bootcdn.net/ajax/libs/izitoast/1.4.0/js/iziToast.min.js',
+      fancybox_css: 'https://cdn.bootcdn.net/ajax/libs/fancyapps-ui/4.0.31/fancybox.min.css',
+      fancybox_js: 'https://cdn.bootcdn.net/ajax/libs/fancyapps-ui/4.0.31/fancybox.umd.min.js'
     },
     sidebar: {
       for_page: ["repos","qgroup","category","guide"],
@@ -2625,7 +2625,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
 
 <script>
   
-  volantis.css("https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css");
+  volantis.css("https://cdn.bootcdn.net/ajax/libs/font-awesome/6.1.1/css/all.min.css");
   
   
   
@@ -3030,7 +3030,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
 
 
 
-  <script defer src="https://cdnjs.cloudflare.com/ajax/libs/vanilla-lazyload/17.1.0/lazyload.min.js"></script>
+  <script defer src="https://cdn.bootcdn.net/ajax/libs/vanilla-lazyload/17.1.0/lazyload.min.js"></script>
 <script>
   // https://www.npmjs.com/package/vanilla-lazyload
   // Set the options globally
@@ -3089,7 +3089,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
       p_scrollrebeal();
     }
   }
-  volantis.js("https://cdnjs.cloudflare.com/ajax/libs/scrollReveal.js/4.0.9/scrollreveal.min.js");
+  volantis.js("https://cdn.bootcdn.net/ajax/libs/scrollReveal.js/4.0.9/scrollreveal.min.js");
   document.addEventListener("DOMContentLoaded", init_scrollrebeal)
 </script>
 
@@ -3097,12 +3097,12 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
 
 
   <script>
-  volantis.css("https://cdnjs.cloudflare.com/ajax/libs/aplayer/1.10.1/APlayer.min.css");
+  volantis.css("https://cdn.bootcdn.net/ajax/libs/aplayer/1.10.1/APlayer.min.css");
 
   
     (async () => {
       // APlayer 需要在  MetingJS 之前加载
-      await volantis.js("https://cdnjs.cloudflare.com/ajax/libs/aplayer/1.10.1/APlayer.min.js")
+      await volantis.js("https://cdn.bootcdn.net/ajax/libs/aplayer/1.10.1/APlayer.min.js")
       await volantis.js("https://unpkg.com/meting@2/dist/Meting.min.js")
     
       // 右键 music 需要在 APlayer  MetingJS 之后加载
@@ -3180,7 +3180,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
   volantis.layoutHelper("comments",`<div id="twikoo_container"><i class="fa-solid fa-cog fa-spin fa-fw fa-2x"></i></div>`)
   function load_twikoo() {
     if(!document.querySelectorAll("#twikoo_container")[0])return;
-    volantis.js("https://cdnjs.cloudflare.com/ajax/libs/twikoo/1.6.7/twikoo.min.js", p_twikoo)
+    volantis.js("https://cdn.bootcdn.net/ajax/libs/twikoo/1.6.7/twikoo.min.js", p_twikoo)
   }
   function p_twikoo() {
     if(!document.querySelectorAll("#twikoo_container")[0])return;
@@ -3295,7 +3295,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
 
 
   <script>
-  let imgs = ["https://jsd.cdn.zzko.cn/gh/HDILP/hdilp.github.io/picture/8.jpg","https://jsd.cdn.zzko.cn/gh/HDILP/hdilp.github.io/picture/5.jpg","https://jsd.cdn.zzko.cn/gh/HDILP/hdilp.github.io/picture/2.jpg","https://jsd.cdn.zzko.cn/gh/HDILP/hdilp.github.io/picture/6.jpg","https://jsd.cdn.zzko.cn/gh/HDILP/hdilp.github.io/picture/1.jpg","https://jsd.cdn.zzko.cn/gh/HDILP/hdilp.github.io/picture/3.jpg","https://jsd.cdn.zzko.cn/gh/HDILP/hdilp.github.io/picture/12.jpg","https://jsd.cdn.zzko.cn/gh/HDILP/hdilp.github.io/picture/14.jpg","https://jsd.cdn.zzko.cn/gh/HDILP/hdilp.github.io/picture/15.jpg","https://jsd.cdn.zzko.cn/gh/HDILP/hdilp.github.io/picture/9.jpg","https://jsd.cdn.zzko.cn/gh/HDILP/hdilp.github.io/picture/4.jpg","https://jsd.cdn.zzko.cn/gh/HDILP/hdilp.github.io/picture/10.jpg","https://jsd.cdn.zzko.cn/gh/HDILP/hdilp.github.io/picture/7.jpg","https://jsd.cdn.zzko.cn/gh/HDILP/hdilp.github.io/picture/13.jpg","https://jsd.cdn.zzko.cn/gh/HDILP/hdilp.github.io/picture/11.jpg"];
+  let imgs = ["https://jsd.cdn.zzko.cn/gh/HDILP/hdilp.github.io/picture/15.jpg","https://jsd.cdn.zzko.cn/gh/HDILP/hdilp.github.io/picture/8.jpg","https://jsd.cdn.zzko.cn/gh/HDILP/hdilp.github.io/picture/14.jpg","https://jsd.cdn.zzko.cn/gh/HDILP/hdilp.github.io/picture/1.jpg","https://jsd.cdn.zzko.cn/gh/HDILP/hdilp.github.io/picture/3.jpg","https://jsd.cdn.zzko.cn/gh/HDILP/hdilp.github.io/picture/12.jpg","https://jsd.cdn.zzko.cn/gh/HDILP/hdilp.github.io/picture/5.jpg","https://jsd.cdn.zzko.cn/gh/HDILP/hdilp.github.io/picture/6.jpg","https://jsd.cdn.zzko.cn/gh/HDILP/hdilp.github.io/picture/4.jpg","https://jsd.cdn.zzko.cn/gh/HDILP/hdilp.github.io/picture/13.jpg","https://jsd.cdn.zzko.cn/gh/HDILP/hdilp.github.io/picture/9.jpg","https://jsd.cdn.zzko.cn/gh/HDILP/hdilp.github.io/picture/10.jpg","https://jsd.cdn.zzko.cn/gh/HDILP/hdilp.github.io/picture/11.jpg","https://jsd.cdn.zzko.cn/gh/HDILP/hdilp.github.io/picture/2.jpg","https://jsd.cdn.zzko.cn/gh/HDILP/hdilp.github.io/picture/7.jpg"];
   let index = 0;
   let IntervalParallax = null;
 
@@ -3348,8 +3348,8 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
   <script>
   function load_swiper() {
     if (!document.querySelectorAll(".swiper-container")[0]) return;
-    volantis.css("https://cdnjs.cloudflare.com/ajax/libs/Swiper/8.3.2/swiper-bundle.min.css");
-    volantis.js("https://cdnjs.cloudflare.com/ajax/libs/Swiper/8.3.2/swiper-bundle.min.js").then(() => {
+    volantis.css("https://cdn.bootcdn.net/ajax/libs/Swiper/8.3.2/swiper-bundle.min.css");
+    volantis.js("https://cdn.bootcdn.net/ajax/libs/Swiper/8.3.2/swiper-bundle.min.js").then(() => {
       p_swiper();
     });
   }
@@ -3378,8 +3378,8 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
 
 
   <script>
-  volantis.css("https://cdnjs.cloudflare.com/ajax/libs/pace/1.2.4/themes/blue/pace-theme-minimal.min.css");
-  volantis.js("https://cdnjs.cloudflare.com/ajax/libs/pace/1.2.4/pace.min.js").then(() => {
+  volantis.css("https://cdn.bootcdn.net/ajax/libs/pace/1.2.4/themes/blue/pace-theme-minimal.min.css");
+  volantis.js("https://cdn.bootcdn.net/ajax/libs/pace/1.2.4/pace.min.js").then(() => {
     Pace.options.restartOnPushState = false;
     // 阅读进度
     volantis.scroll.push(() => {

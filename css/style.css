@@ -3284,6 +3284,39 @@ img.lazyload:not(.placeholder).loaded {
   top: 80px;
   z-index: 10;
 }
+.bber-talk {
+  padding: 0.2rem 1rem;
+}
+.bber-talk :hover {
+  border-color: #49b1f5;
+  box-shadow: none;
+  -webkit-box-shadow: none;
+}
+.bber-talk a {
+  color: var(--font-color);
+}
+.bber-talk .talk-list {
+  display: -webkit-box /* OLD - iOS 6-, Safari 3.1-6 */;
+  display: -moz-box /* OLD - Firefox 19- (buggy but mostly works) */;
+  display: block !important;
+  max-height: 25px;
+  overflow: hidden;
+}
+.bber-talk .talk-list :hover {
+  color: #49b1f5 !important;
+  transition: all 0.2s ease-in-out;
+  -webkit-transition: all 0.2s ease-in-out;
+  -khtml-transition: all 0.2s ease-in-out;
+  -moz-transition: all 0.2s ease-in-out;
+  -o-transition: all 0.2s ease-in-out;
+  -ms-transition: all 0.2s ease-in-out;
+}
+.bber-talk .talk-list .item {
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  width: 98%;
+  overflow: hidden;
+}
 .snackbar-wrap {
   position: fixed;
   width: 100%;

@@ -2069,7 +2069,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
     root: '/',
     debug: "env",
     default: {"avatar":"https://unpkg.com/volantis-static@0.0.1660614606622/media/placeholder/avatar/round/3442075.svg","link":"https://unpkg.com/volantis-static@0.0.1660614606622/media/placeholder/link/8f277b4ee0ecd.svg","cover":"https://unpkg.com/volantis-static@0.0.1660614606622/media/placeholder/cover/76b86c0226ffd.svg","image":"https://unpkg.com/volantis-static@0.0.1660614606622/media/placeholder/image/2659360.svg"},
-    lastupdate: new Date(1712925705642),
+    lastupdate: new Date(1713538689590),
     cdn: {
       izitoast_css: 'https://cdn.bootcdn.net/ajax/libs/izitoast/1.4.0/css/iziToast.min.css',
       izitoast_js: 'https://cdn.bootcdn.net/ajax/libs/izitoast/1.4.0/js/iziToast.min.js',
@@ -2449,16 +2449,13 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
   
   <div class='md article-desc' itemprop="articleBody">
     
-      
-        <blockquote>
+      <blockquote>
 <p>新年快乐！q(≧▽≦q)</p>
 </blockquote>
 <p>不知不觉，我的网站已经一年啦！<del>但我从没有写过一篇文章(＠_＠;)</del></p>
 <hr>
 <p>我以后会继续加油，优化小站</p>
 <p>祝大家新年快乐！</p>
-
-      
     
   </div>
   
@@ -2476,6 +2473,12 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
         <time itemprop="dateCreated datePublished" datetime="2024-01-01T15:09:01+08:00">2024-01-01</time>
         
       </div>
+      
+        <div>
+          <a class='readmore' href='/Happy-new-year.html' itemprop="url">
+            阅读全文
+          </a>
+        </div>
       
     </div>
   
@@ -2512,13 +2515,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
 
   <div class='content'>
     
-      <p>新年快乐！</p>
-
-    
-      <p>本站已装修完成</p>
-
-    
-      <p>o(〃＾▽＾〃)o</p>
+      <p><strong>本站已经完成从Github Page迁移到Vercel。</strong><br>国内访问速度从原来的55秒加速到5秒！</p>
 
     
   </div>
@@ -2655,19 +2652,25 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
 
   
     
-      <meting-js
-        theme='#1BCDFC'
-        autoplay='true'
-        volume='0.3'
-        loop='all'
-        order='random'
-        fixed='false'
-        list-max-height='320px'
-        server='netease'
-        type='playlist'
-        id='4865548839'
-        list-folded='true'>
-      </meting-js>
+	  <div id="aplayerContent">
+		  <meting-js
+			theme='#FFAAB2'
+			autoplay='true'
+			volume='0.3'
+			loop='all'
+			order='random'
+			fixed='false'
+			list-max-height='320px'
+			server='netease'
+			type='playlist'
+			id='4865548839'
+			list-folded='true'>
+		  </meting-js>
+	  </div>
+	  <script>
+        // 对所有链接跳转事件绑定pjax容器container
+        $(document).pjax('a[target!=_blank]', '#pageContent', {fragment: '#pageContent', timeout:8000})
+      </script>
     
   
 
@@ -3415,7 +3418,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
 
 
   <script>
-  let imgs = ["https://cdn.jsdelivr.us/gh/HDILP/hdilp.github.io/picture/6.jpg","https://cdn.jsdelivr.us/gh/HDILP/hdilp.github.io/picture/9.jpg","https://cdn.jsdelivr.us/gh/HDILP/hdilp.github.io/picture/11.jpg","https://cdn.jsdelivr.us/gh/HDILP/hdilp.github.io/picture/13.jpg","https://cdn.jsdelivr.us/gh/HDILP/hdilp.github.io/picture/10.jpg","https://cdn.jsdelivr.us/gh/HDILP/hdilp.github.io/picture/5.jpg","https://cdn.jsdelivr.us/gh/HDILP/hdilp.github.io/picture/15.jpg","https://cdn.jsdelivr.us/gh/HDILP/hdilp.github.io/picture/12.jpg","https://cdn.jsdelivr.us/gh/HDILP/hdilp.github.io/picture/8.jpg","https://cdn.jsdelivr.us/gh/HDILP/hdilp.github.io/picture/4.jpg","https://cdn.jsdelivr.us/gh/HDILP/hdilp.github.io/picture/2.jpg","https://cdn.jsdelivr.us/gh/HDILP/hdilp.github.io/picture/1.jpg","https://cdn.jsdelivr.us/gh/HDILP/hdilp.github.io/picture/7.jpg","https://cdn.jsdelivr.us/gh/HDILP/hdilp.github.io/picture/3.jpg","https://cdn.jsdelivr.us/gh/HDILP/hdilp.github.io/picture/14.jpg"];
+  let imgs = ["https://cdn.jsdelivr.us/gh/HDILP/hdilp.github.io/picture/4.jpg","https://cdn.jsdelivr.us/gh/HDILP/hdilp.github.io/picture/15.jpg","https://cdn.jsdelivr.us/gh/HDILP/hdilp.github.io/picture/11.jpg","https://cdn.jsdelivr.us/gh/HDILP/hdilp.github.io/picture/10.jpg","https://cdn.jsdelivr.us/gh/HDILP/hdilp.github.io/picture/9.jpg","https://cdn.jsdelivr.us/gh/HDILP/hdilp.github.io/picture/13.jpg","https://cdn.jsdelivr.us/gh/HDILP/hdilp.github.io/picture/6.jpg","https://cdn.jsdelivr.us/gh/HDILP/hdilp.github.io/picture/3.jpg","https://cdn.jsdelivr.us/gh/HDILP/hdilp.github.io/picture/1.jpg","https://cdn.jsdelivr.us/gh/HDILP/hdilp.github.io/picture/12.jpg","https://cdn.jsdelivr.us/gh/HDILP/hdilp.github.io/picture/5.jpg","https://cdn.jsdelivr.us/gh/HDILP/hdilp.github.io/picture/14.jpg","https://cdn.jsdelivr.us/gh/HDILP/hdilp.github.io/picture/2.jpg","https://cdn.jsdelivr.us/gh/HDILP/hdilp.github.io/picture/7.jpg","https://cdn.jsdelivr.us/gh/HDILP/hdilp.github.io/picture/8.jpg"];
   let index = 0;
   let IntervalParallax = null;
 
@@ -3432,7 +3435,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
     if (imgs.length>1) {
       IntervalParallax = setInterval(function () {
         next_parallax();
-      }, '150000');
+      }, '300000');
     }
   }
 

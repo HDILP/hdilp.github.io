@@ -6,7 +6,7 @@
   <link href="https://hdilp.top/atom.xml" rel="self"/>
   
   <link href="https://hdilp.top/"/>
-  <updated>2024-01-01T07:13:23.138Z</updated>
+  <updated>2024-04-14T11:40:34.498Z</updated>
   <id>https://hdilp.top/</id>
   
   <author>
@@ -17,19 +17,43 @@
   <generator uri="https://hexo.io/">Hexo</generator>
   
   <entry>
+    <title>将Hexo从GitHub Page迁移到Vercel</title>
+    <link href="https://hdilp.top/%E5%B0%86Hexo%E4%BB%8EGitHub%20Page%E8%BF%81%E7%A7%BB%E5%88%B0Vercel.html"/>
+    <id>https://hdilp.top/%E5%B0%86Hexo%E4%BB%8EGitHub%20Page%E8%BF%81%E7%A7%BB%E5%88%B0Vercel.html</id>
+    <published>2024-04-14T07:30:00.000Z</published>
+    <updated>2024-04-14T11:40:34.498Z</updated>
+    
+    <content type="html"><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><p>前言：</p><p>哈哈哈咕了好几个星期终于更了！</p><p>刚刚把我的blog的主题代码pull了一下同步到最新（我改了一些文件，出现了冲突。解决方法：<code>git add .</code> <code>git commit -m &quot;1&quot;</code>之后再<code>git pull</code>），又把网站评论系统Twikoo更新了一下（其实更新主题就把前端更了，后端只要改一下版本号就会自动更新了，很方便），现在准备把blog从<strong>GitHub Page</strong>迁移到<strong>Vercel</strong>。因为GitHub Page套Cloudflare对于国内来说实在是<u>太慢了</u>。</p><span id="more"></span><hr><p>首先先在GitHub上新建一个repo，把这个repo用<strong>GIt</strong>连接到Hexo根目录（在<code>hexo init</code>的时候就已经帮你把**.git文件夹**和其他的东西弄好了）。</p><p><img src="https://pic.imgdb.cn/item/6619329168eb935713c570c3.png" class="lazyload" data-srcset="https://pic.imgdb.cn/item/6619329168eb935713c570c3.png" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" alt="add new repo"></p><p>之后直接<code>git add .</code> <code>git commit -m &quot;first commit&quot;</code> <code>git push -u origin main </code>组合技</p><p>之后打开你的<strong>vercel</strong>，把<strong>刚在github新建的repo</strong>添加进去（首页 - Add New… - Project - Import Git Repository那里选择你的Repo）。然后它就会自动开始编译。</p><p>之后遇到了一个坑（满屏红字警告）</p><p><img src="https://pic.imgdb.cn/item/6619374968eb935713cbd57d.png" class="lazyload" data-srcset="https://pic.imgdb.cn/item/6619374968eb935713cbd57d.png" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw=="></p><p>看上去是一篇文章的内容出了问题。</p><p><del>原因（机翻）：</del></p><blockquote><p><del>Hexo 使用 [Nunjucks] 来渲染帖子（旧版本中使用 [Swig]，其语法相似）。用<code>&#123;&#123; &#125;&#125;</code>或包裹的内容<code>&#123;% %&#125;</code>将被解析并可能导致问题。</del></p></blockquote><p><del>之后直接三个反引号过去之后编译过了，但文件空的（6666666666666），发现远程仓库主题文件夹空的………………</del></p><p><strong>真实原因：有一篇文章使用了主题中的标签，但主题被设置成了子模块（使用<code>git clone</code>安装模块导致的），git push的时候不会把主题文件夹推送到远程库中，编译器无法识别这个东西，所以出现了报错。</strong></p><p>解决方式：</p><blockquote><p>若采用 <code>git clone</code> 的方式安装了主题，需要在 <code>commit</code> 之前，把主题文件夹里面的 <code>.git</code> 重命名或者删除。否则会出现远程仓库中，主题文件夹空白的情况。</p></blockquote><p>但如果删掉.git文件夹，后续就不能<code>git pull</code>更新了，所以就把整个hexo根目录复制到另一个文件夹，在那个新文件夹删.git。</p><p>累了，明天再写（23333333333333）</p><hr><p>4-13更新：</p><p>删掉之后还要清空暂存区的内容<code>git rm --cached &lt;file&gt;</code>，之后直接<code>git add .</code> <code>git commit -m &quot;second commit&quot;</code> <code>git push -u origin main </code>组合技。之后vercel就会自动开始编译。编译过了之后把最新Deployments的设置成生产（点击<strong>Promote to Production</strong>），</p><p><img src="https://pic.imgdb.cn/item/661a5f2b68eb9357136b3e94.png" class="lazyload" data-srcset="https://pic.imgdb.cn/item/661a5f2b68eb9357136b3e94.png" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw=="></p><p>最后分配域名。我们的网站迁移就成功了！</p><p>最后的成果：</p><p><img src="https://pic.imgdb.cn/item/661b708868eb935713c1a8d2.png" class="lazyload" data-srcset="https://pic.imgdb.cn/item/661b708868eb935713c1a8d2.png" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw=="></p><p><img src="https://pic.imgdb.cn/item/661b709868eb935713c1c2eb.png" class="lazyload" data-srcset="https://pic.imgdb.cn/item/661b709868eb935713c1c2eb.png" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw=="></p><p><img src="https://pic.imgdb.cn/item/661b710b68eb935713c3e37f.png" class="lazyload" data-srcset="https://pic.imgdb.cn/item/661b710b68eb935713c3e37f.png" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" alt="这神一般的速度啊"></p><p>（以前用CloudFlare的时候至少用50秒……）</p><p>好了，这一期就到此结束啦！o(〃＾▽＾〃)o，感谢大家的观看，我们下期再见！拜拜！</p><p>下期预告：使用WordPress搭建PHP动态网站（我这个是静态的）</p>]]></content>
+    
+    
+    <summary type="html">&lt;p&gt;前言：&lt;/p&gt;
+&lt;p&gt;哈哈哈咕了好几个星期终于更了！&lt;/p&gt;
+&lt;p&gt;刚刚把我的blog的主题代码pull了一下同步到最新（我改了一些文件，出现了冲突。解决方法：&lt;code&gt;git add .&lt;/code&gt; &lt;code&gt;git commit -m &amp;quot;1&amp;quot;&lt;/code&gt;之后再&lt;code&gt;git pull&lt;/code&gt;），又把网站评论系统Twikoo更新了一下（其实更新主题就把前端更了，后端只要改一下版本号就会自动更新了，很方便），现在准备把blog从&lt;strong&gt;GitHub Page&lt;/strong&gt;迁移到&lt;strong&gt;Vercel&lt;/strong&gt;。因为GitHub Page套Cloudflare对于国内来说实在是&lt;u&gt;太慢了&lt;/u&gt;。&lt;/p&gt;</summary>
+    
+    
+    
+    
+    <category term="hexo" scheme="https://hdilp.top/tags/hexo/"/>
+    
+  </entry>
+  
+  <entry>
     <title>Happy-new-year!</title>
     <link href="https://hdilp.top/Happy-new-year.html"/>
     <id>https://hdilp.top/Happy-new-year.html</id>
     <published>2024-01-01T07:09:01.000Z</published>
-    <updated>2024-01-01T07:13:23.138Z</updated>
+    <updated>2024-04-14T11:40:47.323Z</updated>
     
-    <content type="html"><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><blockquote><p>新年快乐！q(≧▽≦q)</p></blockquote><p>不知不觉，我的网站已经一年啦！<del>但我从没有写过一篇文章(＠_＠;)</del></p><hr><p>我以后会继续加油，优化小站</p><p>祝大家新年快乐！</p>]]></content>
+    <content type="html"><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><blockquote><p>新年快乐！q(≧▽≦q)</p></blockquote><p>不知不觉，我的网站已经一年啦！<del>但我从没有写过一篇文章(＠_＠;)</del></p><hr><p>我以后会继续加油，优化小站</p><p>祝大家新年快乐！</p><span id="more"></span>]]></content>
     
     
-      
-      
-    <summary type="html">&lt;link rel=&quot;stylesheet&quot; class=&quot;aplayer-secondary-style-marker&quot; href=&quot;\assets\css\APlayer.min.css&quot;&gt;&lt;script src=&quot;\assets\js\APlayer.min.js&quot; cla</summary>
-      
+    <summary type="html">&lt;blockquote&gt;
+&lt;p&gt;新年快乐！q(≧▽≦q)&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;不知不觉，我的网站已经一年啦！&lt;del&gt;但我从没有写过一篇文章(＠_＠;)&lt;/del&gt;&lt;/p&gt;
+&lt;hr&gt;
+&lt;p&gt;我以后会继续加油，优化小站&lt;/p&gt;
+&lt;p&gt;祝大家新年快乐！&lt;/p&gt;</summary>
     
     
     
@@ -41,15 +65,19 @@
     <link href="https://hdilp.top/pin.html"/>
     <id>https://hdilp.top/pin.html</id>
     <published>2022-12-31T16:00:00.000Z</published>
-    <updated>2022-12-31T08:10:36.633Z</updated>
+    <updated>2024-04-14T11:41:03.016Z</updated>
     
-    <content type="html"><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><p><span class='p logo center large'>HDILP-STUDIO</span><span class='p center small logo'>Share the beauty</span></p><br><span class='btn solid large center'><a class="button" href='/about/' title='关于'><i class='fa-regular fa-flag'></i>关于</a></span><br>]]></content>
+    <content type="html"><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><p><span class='p logo center large'>HDILP-STUDIO</span><span class='p center small logo'>Share the beauty</span></p><br><span class='btn solid large center'><a class="button" href='/about/' title='关于'><i class='fa-regular fa-flag'></i>关于</a></span><br><span id="more"></span>]]></content>
     
     
-      
-      
-    <summary type="html">&lt;link rel=&quot;stylesheet&quot; class=&quot;aplayer-secondary-style-marker&quot; href=&quot;\assets\css\APlayer.min.css&quot;&gt;&lt;script src=&quot;\assets\js\APlayer.min.js&quot; cla</summary>
-      
+    <summary type="html">&lt;p&gt;
+&lt;span class=&#39;p logo center large&#39;&gt;HDILP-STUDIO&lt;/span&gt;
+&lt;span class=&#39;p center small logo&#39;&gt;Share the beauty&lt;/span&gt;
+&lt;/p&gt;
+
+&lt;br&gt;
+&lt;span class=&#39;btn solid large center&#39;&gt;&lt;a class=&quot;button&quot; href=&#39;/about/&#39; title=&#39;关于&#39;&gt;&lt;i class=&#39;fa-regular fa-flag&#39;&gt;&lt;/i&gt;关于&lt;/a&gt;&lt;/span&gt;
+&lt;br&gt;</summary>
     
     
     
